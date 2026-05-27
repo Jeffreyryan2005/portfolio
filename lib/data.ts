@@ -119,7 +119,7 @@ export const experienceData: Experience[] = [
     id: 1,
     role: "Web Developer",
     company: "Infosys Springboard",
-    duration: "Oct 2025 — Dec 2026",
+    duration: "Oct 2025 — Dec 2025",
     type: "Internship",
     description:
       "Building production-grade applications at one of India's largest IT companies.",
@@ -157,6 +157,7 @@ export interface Project {
   live?: string;
   featured: boolean;
   gradient: string;
+  stats: string[];
 }
 
 export const projectsData: Project[] = [
@@ -170,6 +171,7 @@ export const projectsData: Project[] = [
     github: "#",
     featured: true,
     gradient: "from-cyan-500 to-blue-600",
+    stats: ["10K+ Emails", "Real-time", "Role-based Auth"],
   },
   {
     id: 2,
@@ -181,6 +183,7 @@ export const projectsData: Project[] = [
     github: "#",
     featured: false,
     gradient: "from-violet-500 to-purple-600",
+    stats: ["Live Data", "3 Algorithms", "60 FPS"],
   },
   {
     id: 3,
@@ -192,6 +195,7 @@ export const projectsData: Project[] = [
     github: "#",
     featured: false,
     gradient: "from-emerald-500 to-teal-600",
+    stats: ["Full Stack", "Geospatial", "IoT Ready"],
   },
 ];
 
