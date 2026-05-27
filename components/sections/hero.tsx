@@ -183,7 +183,6 @@ export function Hero() {
           <motion.div 
             animate={{ y: [-5, 5, -5] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            style={{ y: useTransform(scrollYProgress, [0, 1], ["0%", "15%"]) }}
             className="relative z-20"
           >
             {/* Tight glow behind image */}
