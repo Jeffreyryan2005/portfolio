@@ -11,9 +11,7 @@ export function SmoothScrollProvider({
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.8,
-      easing: (t: number) => 1 - Math.pow(1 - t, 4),
-      lerp: 0.08,
+      lerp: 0.1,
       smoothWheel: true,
       syncTouch: false,
     });

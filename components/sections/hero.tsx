@@ -47,13 +47,13 @@ export function Hero() {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: { staggerChildren: 0.1, delayChildren: 0.4 }
+      transition: { staggerChildren: 0.05, delayChildren: 0.1 }
     }
   };
 
   const item = {
-    hidden: { opacity: 0, y: 20, filter: "blur(10px)" },
-    show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 1.2, ease: [0.25, 1, 0.5, 1] as [number, number, number, number] } }
+    hidden: { opacity: 0, y: 15, filter: "blur(5px)" },
+    show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.6, ease: [0.25, 1, 0.5, 1] as [number, number, number, number] } }
   };
 
   return (
@@ -69,7 +69,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2, ease: [0.25, 1, 0.5, 1] }}
+            transition={{ duration: 0.6, delay: 0, ease: [0.25, 1, 0.5, 1] }}
             className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-white/5 bg-white/[0.02] px-4 py-1.5 backdrop-blur-md"
           >
             <span className="relative flex h-1.5 w-1.5">
@@ -94,7 +94,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, filter: "blur(10px)" }}
             animate={{ opacity: 1, filter: "blur(0px)" }}
-            transition={{ duration: 1.2, delay: 0.7, ease: [0.25, 1, 0.5, 1] }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 1, 0.5, 1] }}
             className="text-xl sm:text-2xl text-white/50 mb-6 max-w-xl font-light tracking-normal leading-snug"
           >
             <TypingEffect words={siteConfig.heroSubtitles} />
@@ -104,7 +104,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.9, ease: [0.25, 1, 0.5, 1] }}
+            transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
             className="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-8"
           >
             {["Next.js", "TypeScript", "AWS", "AI Systems"].map((tech) => (
@@ -117,7 +117,7 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.1, ease: [0.25, 1, 0.5, 1] }}
+            transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 1, 0.5, 1] }}
             className="mb-10 text-base text-white/40 leading-relaxed max-w-[55ch] mx-auto lg:mx-0 font-light"
           >
             {siteConfig.resumeTagline}
@@ -126,7 +126,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.3, ease: [0.25, 1, 0.5, 1] }}
+            transition={{ duration: 0.6, delay: 0.5, ease: [0.25, 1, 0.5, 1] }}
             className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full sm:w-auto"
           >
             <MagneticButton onClick={() => scrollTo("projects")} className="w-full sm:w-auto px-8 py-3.5 text-sm before:hover:opacity-40">
