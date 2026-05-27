@@ -61,7 +61,9 @@ export function Hero() {
       id="hero"
       className="relative flex min-h-screen w-full items-center justify-center overflow-hidden pt-12 md:pt-20 bg-[#030303]"
     >
-      <HeroParticles />
+      <div className="hidden md:block">
+        <HeroParticles />
+      </div>
       <div className="relative z-10 w-full max-w-[85rem] px-6 mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-20">
         
         {/* Left Content */}

@@ -31,13 +31,13 @@ export default function Home() {
         <SectionDivider />
         <Skills />
         <SectionDivider />
-        <div className="w-full bg-[#030303]/90 backdrop-blur-xl border-y border-white/5">
+        <div className="w-full bg-[#030303]/95 md:bg-[#030303]/90 md:backdrop-blur-xl border-y border-white/5">
           <Experience />
         </div>
         <SectionDivider />
         <Projects />
         <SectionDivider />
-        <div className="w-full bg-[#030303]/90 backdrop-blur-xl border-y border-white/5">
+        <div className="w-full bg-[#030303]/95 md:bg-[#030303]/90 md:backdrop-blur-xl border-y border-white/5">
           <Certifications />
         </div>
         <Contact />
