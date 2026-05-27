@@ -13,17 +13,17 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
   useEffect(() => {
     let currentProgress = 0;
     const interval = setInterval(() => {
-      currentProgress += Math.random() * 20 + 10;
+      currentProgress += Math.random() * 30 + 20;
       if (currentProgress >= 100) {
         currentProgress = 100;
         setProgress(100);
         clearInterval(interval);
-        setTimeout(() => setIsExiting(true), 100);
-        setTimeout(() => onComplete(), 500);
+        setTimeout(() => setIsExiting(true), 50);
+        setTimeout(() => onComplete(), 300);
       } else {
         setProgress(Math.floor(currentProgress));
       }
-    }, 80);
+    }, 40);
     return () => clearInterval(interval);
   }, [onComplete]);
 

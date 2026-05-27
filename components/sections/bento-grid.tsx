@@ -21,7 +21,7 @@ export function BentoGridSection() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[250px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-auto md:auto-rows-[250px]">
           
           {/* Main About Tile (Spans 2x2 on large screens) */}
           <Reveal className="md:col-span-2 md:row-span-2" delay={0.1}>
@@ -35,7 +35,7 @@ export function BentoGridSection() {
                   {aboutData.description}
                 </p>
               </div>
-              <div className="flex items-center gap-4 mt-8">
+              <div className="flex flex-wrap items-center gap-4 mt-8">
                 <div className="flex items-center gap-2 text-xs font-medium text-white/40 bg-white/5 px-3 py-1.5 rounded-full border border-white/5">
                   <MapPin size={14} /> {siteConfig.location}
                 </div>
