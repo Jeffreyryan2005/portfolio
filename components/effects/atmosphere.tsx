@@ -6,36 +6,13 @@ export function Atmosphere() {
     <div 
       className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-[#030303]"
     >
-      {/* Dynamic Deep Ambient Blobs (Desktop Only for Performance) */}
-      <div className="hidden md:block">
-        <motion.div
-          animate={{
-            scale: [1, 1.15, 1],
-            opacity: [0.02, 0.035, 0.02],
-            x: ["-20%", "0%", "-20%"],
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-[20%] -left-[10%] w-[60vw] h-[60vw] rounded-full bg-cyan-900/20 blur-[150px]"
-        />
-        <motion.div
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.015, 0.03, 0.015],
-            x: ["20%", "0%", "20%"],
-          }}
-          transition={{ duration: 25, repeat: Infinity, ease: "easeInOut", delay: 3 }}
-          className="absolute top-[40%] -right-[10%] w-[50vw] h-[50vw] rounded-full bg-violet-900/20 blur-[150px]"
-        />
-        <motion.div
-          animate={{
-            scale: [1, 1.08, 1],
-            opacity: [0.02, 0.04, 0.02],
-            y: ["10%", "0%", "10%"],
-          }}
-          transition={{ duration: 22, repeat: Infinity, ease: "easeInOut", delay: 6 }}
-          className="absolute -bottom-[20%] left-[20%] w-[60vw] h-[50vw] rounded-full bg-fuchsia-900/15 blur-[150px]"
-        />
-      </div>
+      {/* Static Deep Ambient Gradient (Zero GPU Overhead) */}
+      <div 
+        className="absolute inset-0 opacity-30"
+        style={{
+          background: 'radial-gradient(circle at 10% 20%, rgba(8, 145, 178, 0.15) 0%, transparent 40%), radial-gradient(circle at 90% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 40%), radial-gradient(circle at 30% 90%, rgba(217, 70, 239, 0.1) 0%, transparent 40%)'
+        }}
+      />
 
       {/* Clean, minimalistic grid */}
       <div 
@@ -44,7 +21,7 @@ export function Atmosphere() {
       />
       
       {/* Extremely subtle, static deep glow (Highly performant) */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[50vh] bg-white/[0.02] blur-[120px] rounded-full" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[50vh] bg-white/[0.02] blur-[120px] rounded-full pointer-events-none" />
     </div>
   );
 }
