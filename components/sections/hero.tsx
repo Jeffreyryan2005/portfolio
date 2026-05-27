@@ -52,8 +52,8 @@ export function Hero() {
   };
 
   const item = {
-    hidden: { opacity: 0, y: 15, filter: "blur(5px)" },
-    show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.6, ease: [0.25, 1, 0.5, 1] as [number, number, number, number] } }
+    hidden: { opacity: 1, y: 0, filter: "blur(0px)" },
+    show: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0, ease: [0.25, 1, 0.5, 1] as [number, number, number, number] } }
   };
 
   return (
@@ -67,7 +67,7 @@ export function Hero() {
         {/* Left Content */}
         <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start w-full">
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0, ease: [0.25, 1, 0.5, 1] }}
             className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-white/5 bg-white/[0.02] px-4 py-1.5 backdrop-blur-md"
@@ -92,7 +92,7 @@ export function Hero() {
           </motion.h1>
 
           <motion.div
-            initial={{ opacity: 0, filter: "blur(10px)" }}
+            initial={{ opacity: 1, filter: "blur(0px)" }}
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 1, 0.5, 1] }}
             className="text-xl sm:text-2xl text-white/50 mb-6 max-w-xl font-light tracking-normal leading-snug"
@@ -102,7 +102,7 @@ export function Hero() {
 
           {/* Mini Tech Badges */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
             className="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-8"
@@ -124,7 +124,7 @@ export function Hero() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5, ease: [0.25, 1, 0.5, 1] }}
             className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full sm:w-auto"

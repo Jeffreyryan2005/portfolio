@@ -10,7 +10,7 @@ import { Experience } from "@/components/sections/experience";
 import { Projects } from "@/components/sections/projects";
 import { Certifications } from "@/components/sections/certifications";
 import { Contact } from "@/components/sections/contact";
-import { SmoothScrollProvider } from "@/components/providers/smooth-scroll";
+
 import { SectionDivider } from "@/components/ui/section-divider";
 import { Atmosphere } from "@/components/effects/atmosphere";
 import { ScrollProgress } from "@/components/effects/scroll-progress";
@@ -20,30 +20,28 @@ export default function Home() {
   return (
     <>
       <CustomCursor />
-      <SmoothScrollProvider>
-        <Atmosphere />
-        <ScrollProgress />
+      <Atmosphere />
+      <ScrollProgress />
 
-        <Navbar />
-        <main className="relative z-10 flex flex-col w-full">
-          <Hero />
-          <SectionDivider />
-          <BentoGridSection />
-          <SectionDivider />
-          <Skills />
-          <SectionDivider />
-          <div className="w-full bg-[#030303]/90 backdrop-blur-xl border-y border-white/5">
-            <Experience />
-          </div>
-          <SectionDivider />
-          <Projects />
-          <SectionDivider />
-          <div className="w-full bg-[#030303]/90 backdrop-blur-xl border-y border-white/5">
-            <Certifications />
-          </div>
-          <Contact />
-        </main>
-      </SmoothScrollProvider>
+      <Navbar />
+      <main className="relative z-10 flex flex-col w-full">
+        <Hero />
+        <SectionDivider />
+        <BentoGridSection />
+        <SectionDivider />
+        <Skills />
+        <SectionDivider />
+        <div className="w-full bg-[#030303]/90 backdrop-blur-xl border-y border-white/5">
+          <Experience />
+        </div>
+        <SectionDivider />
+        <Projects />
+        <SectionDivider />
+        <div className="w-full bg-[#030303]/90 backdrop-blur-xl border-y border-white/5">
+          <Certifications />
+        </div>
+        <Contact />
+      </main>
     </>
   );
 }
