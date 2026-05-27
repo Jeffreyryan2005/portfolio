@@ -58,7 +58,8 @@ export function Hero() {
         {/* Left Content */}
         <div className="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start w-full">
           <div
-            className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-white/5 bg-white/[0.02] px-4 py-1.5 backdrop-blur-md"
+            className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-white/5 bg-white/[0.02] px-4 py-1.5 backdrop-blur-md animate-fade-in-up"
+            style={{ animationDelay: "0ms" }}
           >
             <span className="relative flex h-1.5 w-1.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
@@ -70,21 +71,24 @@ export function Hero() {
           </div>
 
           <h1 
-            className="mb-8 text-[11.5vw] sm:text-6xl md:text-7xl font-bold tracking-tighter text-white font-[family-name:var(--font-space-grotesk)] leading-[0.9]"
+            className="mb-8 text-[11.5vw] sm:text-6xl md:text-7xl font-bold tracking-tighter text-white font-[family-name:var(--font-space-grotesk)] leading-[0.9] animate-fade-in-up"
+            style={{ animationDelay: "100ms" }}
           >
             <span className="block text-white/70">Hi, I'm</span>
             <span className="block text-white">Jeffrey Ryan.</span>
           </h1>
 
           <div
-            className="text-xl sm:text-2xl text-white/50 mb-6 max-w-xl font-light tracking-normal leading-snug"
+            className="text-xl sm:text-2xl text-white/50 mb-6 max-w-xl font-light tracking-normal leading-snug animate-fade-in-up"
+            style={{ animationDelay: "200ms" }}
           >
             <TypingEffect words={siteConfig.heroSubtitles} />
           </div>
 
           {/* Mini Tech Badges */}
           <div
-            className="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-8"
+            className="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-8 animate-fade-in-up"
+            style={{ animationDelay: "300ms" }}
           >
             {["Next.js", "TypeScript", "AWS", "AI Systems"].map((tech) => (
               <span key={tech} className="px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase text-white/70 bg-white/[0.03] border border-white/[0.08] rounded-full backdrop-blur-sm">
@@ -94,13 +98,15 @@ export function Hero() {
           </div>
 
           <p
-            className="mb-10 text-base text-white/40 leading-relaxed max-w-[55ch] mx-auto lg:mx-0 font-light"
+            className="mb-10 text-base text-white/40 leading-relaxed max-w-[55ch] mx-auto lg:mx-0 font-light animate-fade-in-up"
+            style={{ animationDelay: "400ms" }}
           >
             {siteConfig.resumeTagline}
           </p>
 
           <div
-            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full sm:w-auto animate-fade-in-up"
+            style={{ animationDelay: "500ms" }}
           >
             <MagneticButton onClick={() => scrollTo("projects")} className="w-full sm:w-auto px-8 py-3.5 text-sm before:hover:opacity-40">
               View Projects

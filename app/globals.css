@@ -22,6 +22,7 @@
   --animate-glow: glow 2s ease-in-out infinite alternate;
   --animate-gradient: gradient 8s linear infinite;
   --animate-marquee: marquee 40s linear infinite;
+  --animate-fade-in-up: fade-in-up 1s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 /* ===========================
@@ -133,6 +134,17 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
