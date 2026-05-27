@@ -44,7 +44,7 @@ export function Skills() {
   };
 
   return (
-    <section id="skills" className="relative w-full overflow-hidden py-32 px-6 bg-[#0a0a0f]">
+    <section id="skills" className="relative w-full overflow-hidden py-16 md:py-24 px-6 bg-[#0a0a0f]">
       {/* Subtle Premium Background Noise/Gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.02)_0%,rgba(0,0,0,0)_70%)] pointer-events-none" />
       

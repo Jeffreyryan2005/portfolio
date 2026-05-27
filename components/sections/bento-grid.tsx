@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 export function BentoGridSection() {
   return (
-    <section id="about" className="relative w-full overflow-hidden py-32 px-6 bg-[#030303]">
+    <section id="about" className="relative w-full overflow-hidden py-16 md:py-24 px-6 bg-[#030303]">
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <div className="mb-16">

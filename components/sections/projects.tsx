@@ -158,7 +158,7 @@ function PremiumProjectCard({ project, index }: { project: typeof projectsData[0
 
 export function Projects() {
   return (
-    <section id="projects" className="relative w-full overflow-hidden py-24 px-6 bg-[#030303]">
+    <section id="projects" className="relative w-full overflow-hidden py-16 md:py-24 px-6 bg-[#030303]">
       <div className="mx-auto max-w-[85rem]">
         
         <div className="mb-20 flex flex-col items-start text-left">
