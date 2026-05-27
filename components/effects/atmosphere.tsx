@@ -2,14 +2,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export function Atmosphere() {
-  const { scrollYProgress } = useScroll();
-  
-  // Subtle parallax mapping
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-  
   return (
-    <motion.div 
-      style={{ y }}
+    <div 
       className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-[#030303]"
     >
       {/* Dynamic Deep Ambient Blobs (Desktop Only for Performance) */}
@@ -51,6 +45,6 @@ export function Atmosphere() {
       
       {/* Extremely subtle, static deep glow (Highly performant) */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[50vh] bg-white/[0.02] blur-[120px] rounded-full" />
-    </motion.div>
+    </div>
   );
 }

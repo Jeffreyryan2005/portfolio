@@ -37,10 +37,7 @@ function HeroParticles() {
 }
 
 export function Hero() {
-  const { scrollYProgress } = useScroll();
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -60,9 +57,8 @@ export function Hero() {
   };
 
   return (
-    <motion.section
+    <section
       id="hero"
-      style={{ y, opacity }}
       className="relative flex min-h-screen w-full items-center justify-center overflow-hidden pt-12 md:pt-20 bg-[#030303]"
     >
       <HeroParticles />
@@ -227,6 +223,6 @@ export function Hero() {
           />
         </motion.div>
       </motion.div>
-    </motion.section>
+    </section>
   );
 }
