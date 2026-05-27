@@ -14,8 +14,8 @@ export function SmoothScrollProvider({
       duration: 1.8,
       easing: (t: number) => 1 - Math.pow(1 - t, 4),
       lerp: 0.08,
-      touchMultiplier: 1.5,
       smoothWheel: true,
+      syncTouch: false,
     });
 
     lenisRef.current = lenis;
