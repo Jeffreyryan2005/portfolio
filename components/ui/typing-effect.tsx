@@ -48,14 +48,11 @@ export function TypingEffect({
 
   return (
     <span className={cn("inline-flex items-center", className)}>
-      <AnimatePresence mode="wait">
-        <motion.span
-          key={currentText}
-          className="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent"
-        >
-          {currentText}
-        </motion.span>
-      </AnimatePresence>
+      <span
+        className="bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent"
+      >
+        {currentText}
+      </span>
       <motion.span
         animate={{ opacity: [1, 0] }}
         transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse" }}
